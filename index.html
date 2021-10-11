@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./media/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/da9a95ba90.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Resume</title>
 </head>
@@ -18,8 +19,9 @@
                 </h1>
                 <h1 class="label">
                     Personal data
+                    <i class="fa fa-chevron-down" target = "data"></i>
                 </h1>
-                <ul class="items">
+                <ul class="items" id = "data">
                     <li class="record">
                     </li>
                     <li class="record">
@@ -65,8 +67,9 @@
                 </ul>
                 <h1 class="label">
                     Hard Skills
+                    <i class="fa fa-chevron-down" target = "hard"></i>
                 </h1>
-                <ul class="items">
+                <ul class="items" id = "hard">
                     <li class="record">
                         <span class="head">
                             HTML/CSS/JS
@@ -118,8 +121,9 @@
                 </ul>
                 <h1 class="label">
                     Soft Skills
+                    <i class="fa fa-chevron-down" target = "soft"></i>
                 </h1>
-                <ul class="items">
+                <ul class="items" id = "soft">
                     <li class="record">
                         <span class="head">
                             Hard working
@@ -148,8 +152,9 @@
                 </ul>
                 <h1 class="label">
                     Languages
+                    <i class="fa fa-chevron-down" target ="len"></i>
                 </h1>
-                <lu class="items">
+                <lu class="items" id = "len">
                     <li class="record inline">
                         <span class="head">
                             Ukraine
@@ -184,19 +189,25 @@
             <section name = "biography">
                 <h1 class="label">
                     Biography
+                    <i class="fa fa-chevron-down" target = "bio"></i>
                 </h1>
-                I am Chotniy Vladislav, I am studing on 2-nd course. I was born in village Yarmolintsy, Khmelnytsky oblast in 2003. In 2020 entered in University, that has name KPI named after Ighor Sikorsky. And I am cyrrently studing Software Engineer here.
+                <span id = "bio" class = "text">I am Chotniy Vladislav, I am studing on 2-nd course.
+                    I was born in village Yarmolintsy, Khmelnytsky oblast in 2003.
+                    In 2020 entered in University, that has name KPI named after Ighor Sikorsky.
+                    And I am cyrrently studing Software Engineer here.</span>
             </section>
             <section name = "experience">
                 <h1 class="label">
                     Experience
+                    <i class="fa fa-chevron-down" target = "exp"></i>
                 </h1>
             </section>
             <section name = "hobbies">
                 <h1 class="label">
                     Hobbies
+                    <i class="fa fa-chevron-down" target = "hob"></i>
                 </h1>
-                <lu class="items">
+                <lu class="items" id="hob">
                     <li class="record">
                         play video games
                     </li>
@@ -217,4 +228,5 @@
         </main>
     </div>
 </body>
+<script src="./app/app.js"></script>
 </html>
