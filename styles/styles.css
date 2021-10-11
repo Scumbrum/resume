@@ -128,7 +128,6 @@ body{
     padding-top: 0;
 }
 .fa {
-    cursor: pointer;
     transform: translate(0,10%);
     display: none;
 }
@@ -136,6 +135,9 @@ body{
     display: none;
 }
 @media screen and (max-width:550px) {
+    .label{
+        cursor: pointer;
+    }
     .fa{
         display: inline;
     }
@@ -147,6 +149,7 @@ body{
     }
     .about .label.great{
         display: block;
+        cursor: default;
     }
     .about .label.great::after{
         display: none;

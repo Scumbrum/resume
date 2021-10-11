@@ -1,4 +1,4 @@
-const carets = document.querySelectorAll(".fa.fa-chevron-down")
+const carets = document.querySelectorAll(".label")
 let statuses = new Map()
 for(let caret of carets){
     statuses.set(caret,false)
@@ -16,17 +16,21 @@ for (let caret of carets) {
 }
 
 function hide(caret){
-    caret.className = "fa fa-chevron-down"
-    const target = document.getElementById(caret.getAttribute("target"))
+    const trgetName = caret.getAttribute("target")
+    const target = document.getElementById(trgetName)
+    const arrow = document.querySelector(`.label[target="${trgetName}"] i`)
     if(target){
         target.removeAttribute("style")
+        arrow.className = "fa fa-chevron-down"
     }
 }
 
 function show(caret){
-    caret.className = "fa fa-chevron-up"
-    const target = document.getElementById(caret.getAttribute("target"))
+    const trgetName = caret.getAttribute("target")
+    const target = document.getElementById(trgetName)
+    const arrow = document.querySelector(`.label[target="${trgetName}"] i`)
     if(target){
         target.setAttribute("style","display:block")
+        arrow.className = "fa fa-chevron-up"
     }
 }
