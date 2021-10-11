@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+body{
+    background: linear-gradient(0.25turn,#d1f7fb, #bfa5ff 50%);
+    background-size: cover;
+    min-height: 100vh;
+    
+}
+
+.main_content{
+    max-width: 1100px;
+    border-radius: 3%;
+    width: fit-content;
+    box-shadow: 0 0 5px black;
+    background-color: #d1f7fb;
+    margin: 10px auto;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+}
+.about {
+    height: 100%;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px 0;
+    align-items: center;
+    background-color: #bfa5ff;
+    box-shadow: 0 0 2px black;
+}
+.photo {
+    margin: 0 10px;
+    border-radius: 100%;
+    height: 200px;
+    width: 200px; 
+}
+.personal_data {
+    align-self: flex-end;
+    width: 80%;
+    color: darkblue;
+}
+.label {
+    font-size: 150%;
+    margin: 20px 0 0 0;
+    align-self: flex-end;
+    text-align: left;
+}
+.label::after{
+    margin: 5px 0 0 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: darkblue;
+}
+.items {
+    list-style-type: none;
+}
+.record {
+    margin: 15px 0;
+}
+.head {
+    font-weight: bold;
+    font-size: 110%;
+    line-height: 60%;
+}
+.value {
+    display: block;
+    font-weight: 400;
+    line-height: 100%;
+}
+.inline {
+    display: flex;
+    justify-content: space-between;
+}
+.inline .value {
+    margin-right: 15px;
+}
+.info {
+    color: #820606;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: normal;
+}
+.info .label::after{
+    background: #820606;
+}
+.great {
+    font-size: 300%;
+}
+.info .items{
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.italic {
+    font-style: italic;
+}
+.link {
+    text-decoration: none;
+    color: inherit;
+    background: #bfa5ff;
+    display: block;
+    font-weight: bold;
+    width: fit-content;
+    min-width: 150px;
+    line-height: 150%;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition-duration: .5s;
+}
+.link:hover{
+    background: #820606;
+    color: #bfa5ff;
+    transform: translate(0, -5px);
+}
+.info .record{
+    margin-top: 0;
+    padding-top: 0;
+}
