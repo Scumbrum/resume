@@ -5,11 +5,12 @@
 }
 body{
     background: linear-gradient(0.25turn,#d1f7fb, #bfa5ff 50%);
-    background-size: cover;
     min-height: 100vh;
-    
+    min-width: fit-content;
 }
-
+.about .label.great{
+    display: none;
+}
 .main_content{
     max-width: 1100px;
     border-radius: 3%;
@@ -93,6 +94,9 @@ body{
 .great {
     font-size: 300%;
 }
+.info .label.great{
+    display: block;
+}
 .info .items{
     list-style-type: disc;
     margin-left: 20px;
@@ -122,4 +126,28 @@ body{
 .info .record{
     margin-top: 0;
     padding-top: 0;
+}
+@media screen and (max-width:550px) {
+    .main_content{
+        display: block;
+    }
+    body{
+        background: #d1f7fb;
+    }
+    .about .label.great{
+        display: block;
+    }
+    .about .label.great::after{
+        display: none;
+    }
+    .info .label.great{
+        display: none;
+    }
+    .personal_data {
+        align-self: flex-end;
+        width: 100%;
+        color: darkblue;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
 }
