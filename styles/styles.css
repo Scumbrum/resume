@@ -134,6 +134,9 @@ body{
 .fa + lu{
     display: none;
 }
+.items.vissible {
+    display: block;
+}
 @media screen and (max-width:550px) {
     .label{
         cursor: pointer;
