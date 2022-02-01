@@ -93,9 +93,23 @@ body{
 }
 .great {
     font-size: 300%;
+
+}
+.print {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #820606;
+    font-size: 28px;
+    cursor: pointer;
 }
 .info .label.great{
     display: block;
+    position: relative;
 }
 .info .items{
     list-style-type: disc;
@@ -137,6 +151,16 @@ body{
 .items.vissible {
     display: block;
 }
+.link.inline {
+    min-width: 0;
+    padding: 0 10px;
+    background-color: #820606;
+    color: #bfa5ff;
+}
+
+.link.inline:hover {
+    transform: translate(30%, 0);
+}
 @media screen and (max-width:550px) {
     .label{
         cursor: pointer;
@@ -169,5 +193,26 @@ body{
     }
     .items, .text{
         display: none;
+    }
+}
+
+@media print {
+    .personal_data, .info {
+        color: black;
+    }
+    .personal_data .link {
+        margin: 0;
+        padding: 0;
+        color: black;
+        text-align: start;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+    .personal_data .link::after {
+        content: ": https://github.com/Scumbrum";
+        display: inline;
+        word-wrap: break-word;
+        font-size: 14px;
+        text-transform: none;
     }
 }
