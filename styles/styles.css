@@ -48,7 +48,7 @@ body{
 }
 .label {
     font-size: 150%;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     align-self: flex-end;
     text-align: left;
 }
@@ -69,11 +69,34 @@ body{
     color: darkblue;
 }
 .record {
-    margin: 15px 0;
+    margin: 5px 0;
+}
+.info .record {
+    list-style: disc;
+    display: list-item;
+    position: relative;
+}
+
+.info .record .head {
+    max-width: 65%;
+    
+    display: block;
+    line-height: normal;
+}
+
+.info .record .value {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+    max-width: 30%;
+    text-align: right;
+    margin-right: 0;
 }
 .head {
-    font-weight: bold;
     font-size: 110%;
+    font-weight: bold;
     line-height: 60%;
 }
 .value {
@@ -144,7 +167,6 @@ body{
     transform: translate(0, -5px);
 }
 .info .record{
-    margin-top: 0;
     padding-top: 0;
 }
 .fa {
@@ -165,7 +187,7 @@ body{
 }
 
 .link.inline:hover {
-    transform: translate(30%, 0);
+    transform: translate(30px, 0);
 }
 @media screen and (max-width:550px) {
     .label{
@@ -203,6 +225,11 @@ body{
 }
 
 @media print {
+    .main_content {
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+    }
     .personal_data, .info {
         color: black;
     }
@@ -214,11 +241,13 @@ body{
         word-wrap: break-word;
         max-width: 100%;
     }
-    .personal_data .link::after {
-        content: ": https://github.com/Scumbrum";
-        display: inline;
-        word-wrap: break-word;
-        font-size: 14px;
-        text-transform: none;
+
+    .print {
+        display: none;
+    }
+    
+    .about {
+        box-shadow: none;
+        border-right: 2px solid black;
     }
 }

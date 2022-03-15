@@ -3,6 +3,7 @@ let statuses = new Map()
 for(let caret of carets){
     statuses.set(caret,false)
 }
+
 for (let caret of carets) {
     caret.addEventListener('click', () => {
         if(statuses.get(caret)){
@@ -14,7 +15,11 @@ for (let caret of carets) {
         statuses.set(caret,!statuses.get(caret))
     })
 }
-document.querySelector(".print").addEventListener("click", () => window.print())
+
+document.querySelectorAll(".print").forEach(element => {
+    element.addEventListener("click", () => {window.print()})
+    }
+)
 
 function hide(caret){
     const trgetName = caret.getAttribute("target")
